@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <!--使用let声明对象
+
+        块内 作用域
+        必须先声明
+        函数的块内声音也是作为 let
+        if 等逻辑一定需要进行大括号包含不然不作为块
+        块内之后声明 之后就锁定 该块，不能在之后之前有相当的变量名声明
+
+
+    -->
+
+
+    <!--使用const声明对象
+
+        不可变声明之后
+
+    -->
+
+    <!--顶层对象的属性 §-->
+    <script>
+        var getGlobal = function () {
+            if (typeof self !== 'undefined') { alert(1); return self; }
+            if (typeof window !== 'undefined') { alert(1);return window; }
+            if (typeof global !== 'undefined') { alert(1);return global; }
+            if (typeof globalThis !== 'undefined') { alert(1);return globalThis; }
+            throw new Error('unable to locate global object');
+        };
+        getGlobal();
+    </script>
+</body>
+</html>

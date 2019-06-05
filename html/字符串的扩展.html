@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        let val="\u6211\u662f\u4e2d\u56fd\u4eba";
+        console.log(val)
+//        JavaScript 共有 6 种方法可以表示一个字符。
+
+       /*  '\z' === 'z'  // true
+        '\172' === 'z' // true
+        '\x7A' === 'z' // true
+        '\u007A' === 'z' // true
+        '\u{7A}' === 'z' // true*/
+
+//        字符串的遍历器接口 §
+
+        for (let codePoint of 'foo') {
+            console.log(codePoint)
+        }
+
+
+    </script>
+</body>
+</html>
